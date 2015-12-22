@@ -1,0 +1,184 @@
+/*
+The two classes below work together
+to center the content vertically and
+horizontally on the screen.
+*/
+
+.wrapperOutside {
+   display: table;
+   width: 100vw;
+   height: 100vh;
+}
+
+.wrapperInside {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+
+/*
+The attributes below style the css
+dialog window, and content.
+*/
+
+.dialogContainer {
+  /* Form */
+  width: 320px;
+  height: auto;
+  /*
+  Drop Shadow
+  a. Horizontal shadow
+  b. Vertical shadow
+  c. Blur
+  d. Spread
+  e. Color
+  */
+  -webkit-box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+  background-color: #FFFFFF;
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  /* External padding */
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0; 
+}
+
+.dialogContent { 
+  /* Form */   
+  width: auto;
+  height: auto;
+  background-color: #FFFFFF;
+  /* Corner radius */
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;    
+  /* Internal padding */
+  padding-top: 21px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;     
+}
+
+.dialogContentBody input {
+  width: 80%;
+}
+
+.dialogContentTitle {
+  /* Form */  
+  background-color: #FFFFFF; 
+  /* Typography */  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(0,0,0,.8);
+  line-height: 24px;  
+  text-align: left;
+  letter-spacing: 0.03px;
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;    
+}
+
+.dialogContentBody {
+  /* Typography */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0,0,0,.5);
+  line-height: 24px;    
+  text-align: left;
+  letter-spacing: 0.03px;
+  /* Internal padding */
+  padding-top: 14px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;   
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;       
+}
+
+.dialogActionBar {
+  /* Form */
+  width: auto;
+  height: 48px;
+  background-color: #FFFFFF;
+  text-align: right;
+  /* Corner radius */
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+  border-bottom-right-radius:2px;
+  border-bottom-left-radius:2px;  
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 16px;
+  padding-right: 15px;
+  padding-bottom: 8px;  
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;      
+}
+
+/*
+The attributes below style the
+hit target.
+*/
+
+.buttonTouchTarget {
+  display: inline-block;
+  background-color: rgba(0,0,0,0);
+  /* Remove grey background on link clicked in ios safari */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*
+The attributes below style the
+flat button based on the Google
+material design language.
+*/
+
+.buttonFlat {
+  /* Form */
+  display: inline-block;
+  height: 36px;
+  background-color: rgba(9,9,9,0);
+  /* Typography */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(33,150,243,0.9);
+  line-height: 36px;    
+  text-align: center;
+  letter-spacing: 0.4px;     
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  /* External padding – Touch target size */
+  margin-top: 6px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 6px;
+}
