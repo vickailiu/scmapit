@@ -157,7 +157,7 @@ var Menu = React.createClass({
 											<li>Rotation - Press \'shift\' key to toggle</li>\
 										</ul>\
 									</li>\
-									<li><p>Modify building: Click on the building, choose to rotate/delete on the toolbar</p></li>\
+									<li><p>Modify building: Right click on the building, choose to rotate/delete on the toolbar</p></li>\
 									<li><p>View coverage: Click on the toggle on the list</p></li>\
 									<li>\
 										<p>Menu:</p>\
