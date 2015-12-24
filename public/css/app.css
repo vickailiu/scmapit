@@ -129,7 +129,7 @@ i.erase {
 #palette {
 	width: 420px;
 	position: absolute;
-	/*top: 40px; */
+	top: 60px; 
     left: 860px;
 }
 
@@ -140,6 +140,8 @@ i.erase {
 
 #palette .mdl-tabs__panel {
     padding: 10px 20px;
+    height: 800px;
+    overflow-y: scroll;
 }
 
 .display_row {

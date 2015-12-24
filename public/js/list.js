@@ -1010,7 +1010,7 @@ json = {
 			'color': 'SpringGreen',
 			'placement': 'addons'
 		},
-		'loadship': {
+		'worship': {
 			model: [
 				{
 					'name': 'church',

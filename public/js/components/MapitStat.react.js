@@ -34,6 +34,19 @@ var MapitStat = React.createClass({
           <Field title={"Waste"}        data={this.state.data.requirements.waste}       />
   	    </div>
         <div className = "stat_row">
+          <TwoTermField title={"P"}     data={this.state.data.population.specializations.park} />
+          <TwoTermField title={"Edu"}   data={this.state.data.population.specializations.education} />
+          <TwoTermField title={"T"}     data={this.state.data.population.specializations.transportation} />
+          <TwoTermField title={"B"}     data={this.state.data.population.specializations.beach} />
+          <TwoTermField title={"Ent"}   data={this.state.data.population.specializations.entertainment} />
+        </div>
+        <div className = "stat_row">
+          <TwoTermField title={"M"}     data={this.state.data.population.specializations.mountain} />
+          <TwoTermField title={"G"}     data={this.state.data.population.specializations.gambling} />
+          <TwoTermField title={"L"}     data={this.state.data.population.specializations.landmark} />
+          <TwoTermField title={"W"}     data={this.state.data.population.specializations.worship} />
+        </div>
+        <div className = "stat_row">
           <BuildingStat data={this.state.data.population.building} />
         </div>
       </div>
@@ -86,7 +99,7 @@ var BuildingStat = React.createClass({
 var Field = React.createClass({
   render: function() {
     return (
-      <div><span>{this.props.title+":"}</span><span>{this.props.data}</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+      <div><span>{this.props.title+":"}</span><span>{this.props.data}</span><span>&nbsp;</span><span>&nbsp;</span></div>
     );
   }
 });
@@ -94,7 +107,15 @@ var Field = React.createClass({
 var PercentField = React.createClass({
   render: function() {
     return (
-      <div><span>{this.props.title+":"}</span><span>{Math.round(this.props.data*100)+"%"}</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+      <div><span>{this.props.title+":"}</span><span>{Math.round(this.props.data*100)+"%"}</span><span>&nbsp;</span><span>&nbsp;</span></div>
+    );
+  }
+});
+
+var TwoTermField = React.createClass({
+  render: function() {
+    return (
+      <div><span>{this.props.title+":"}</span><span>{this.props.data.coverage+"/"+Math.round(this.props.data.boosts*100)+"%"}</span><span>&nbsp;</span><span>&nbsp;</span></div>
     );
   }
 });

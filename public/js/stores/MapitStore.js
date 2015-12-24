@@ -23,7 +23,18 @@ var _stat = {
 	},
 	population: {
 		total:0,
-		buildings:{}
+		buildings:{},
+		specializations:{
+			park:{coverage:0, boosts:0},
+			education:{coverage:0, boosts:0},
+			transportation:{coverage:0, boosts:0},
+			beach:{coverage:0, boosts:0},
+			entertainment:{coverage:0, boosts:0},
+			mountain:{coverage:0, boosts:0},
+			gambling:{coverage:0, boosts:0},
+			landmark:{coverage:0, boosts:0},
+			worship:{coverage:0, boosts:0}
+		}
 	}
 };
 
@@ -237,7 +248,8 @@ var MapitStore = assign({}, EventEmitter.prototype, {
 			requirements: _stat.requirements,
 			population: {
 				total: _stat.population.total,
-				building: _stat.population.selectedBuilding
+				building: _stat.population.selectedBuilding,
+				specializations: _stat.population.specializations
 			}
 		};
 	},

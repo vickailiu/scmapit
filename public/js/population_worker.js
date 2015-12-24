@@ -3,7 +3,18 @@ var onmessage = function(e) {
 
 	var population = {
 		total:0,
-		buildings:{}
+		buildings:{},
+		specializations:{
+			park:{coverage:0, boosts:0},
+			education:{coverage:0, boosts:0},
+			transportation:{coverage:0, boosts:0},
+			beach:{coverage:0, boosts:0},
+			entertainment:{coverage:0, boosts:0},
+			mountain:{coverage:0, boosts:0},
+			gambling:{coverage:0, boosts:0},
+			landmark:{coverage:0, boosts:0},
+			worship:{coverage:0, boosts:0}
+		}
 	};
 
 	var rs = buildings.filter(function(building){
@@ -42,6 +53,11 @@ var onmessage = function(e) {
 				buildingPop.boosts[type] = 1;
 			}
 			buildingPop.totalBoost += buildingPop.boosts[type];
+
+			if (buildingPop.boosts[type] > 0) {
+				population.specializations[type].coverage++;
+				population.specializations[type].boosts += buildingPop.boosts[type];
+			}
 		}
 
 		buildingPop.population = Math.round( (rs[i].buildingID == 'residential zone'?1836:2206) * (1+buildingPop.totalBoost) );

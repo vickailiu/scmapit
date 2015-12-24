@@ -68,7 +68,7 @@ $('#buildings').on('mouseup', '.js-drag', function(event) {
 
 // right click
 $('#buildings').on('contextmenu', '.js-drag', function(event) {
-    console.log(event);
+    // console.log(event);
     if (MapitActions.getStatus() == MapitConstants.STATUS_STANDBY ||
         MapitActions.getStatus() == MapitConstants.STATUS_PREMOVEBUILDING) {
         selectingBuilding = this.id;
