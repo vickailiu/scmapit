@@ -144,13 +144,12 @@ function addBuilding(key, buildingID, position, props, rotated) {
 function commitBuilding(oldKey, newKey) {
 	setupFilter('key', oldKey);
 	var building = _buildings.filter(filterCallback)[0];
-
-	updatePlacement(building, newKey);
-
-	_movingBuilding = null;
-	if (oldKey!=newKey)
+	if (newKey)
 		building.key = newKey;
 
+	updatePlacement(building, building.key);
+
+	_movingBuilding = null;
 	updateStat();
 }
 

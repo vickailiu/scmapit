@@ -104,6 +104,8 @@ $('#toolbox').on('click', 'button', function(e) {
 
 //Status
 var currentActiveBuilding; // for building rotation
+var currentActiveBuildingPrePos;
+
 $('body').on('mousedown', '.js-drag', function() {
     if (MapitActions.getStatus() == MapitConstants.STATUS_STANDBY)
         MapitActions.setStatus(MapitConstants.STATUS_PREMOVEBUILDING);
@@ -195,6 +197,34 @@ document.onkeydown = function(e) {
 document.onkeyup = function(e) {
     var event = e || window.event;
 
+    if (getKeyCode(event) == 27 && // esc key
+        (MapitActions.getStatus()==MapitConstants.STATUS_ADDBUILDING || 
+        MapitActions.getStatus()==MapitConstants.STATUS_MOVEBUILDING)) {
+
+        // determin whether to keep the currently dragged building, or delete it
+        if (MapitActions.getStatus()==MapitConstants.STATUS_MOVEBUILDING) {
+            if (isValid(currentActiveBuilding, currentActiveBuildingPrePos)) {
+                MapitActions.moveBuildingTo(currentActiveBuilding, currentActiveBuildingPrePos);
+                MapitActions.commitBuilding(currentActiveBuilding);
+            } else {
+                MapitActions.removeBuilding(currentActiveBuilding);
+            }
+        } else {
+            MapitActions.removeBuilding(currentActiveBuilding);
+        }
+
+        // reset the status
+        MapitActions.setStatus(MapitConstants.STATUS_STANDBY);
+        currentActiveBuilding = null;
+
+        // Create the blue event to stop all interactjs interactions
+        var event = document.createEvent('Event');
+        event.initEvent('blur', true, true);
+        document.dispatchEvent(event); 
+        // will fire up interactionDragEndHandler()
+        // but we already set the status to standby, so no actions in the interactionDragEndHandler() will be taken
+    }
+
     if (isDrawingStraightRoad && !event.shiftKey)
         isDrawingStraightRoad = false;
 
@@ -254,12 +284,17 @@ function interactBuildingMoveHandler(event) {
             movingBuilding = event.currentTarget;
             MapitActions.setStatus(MapitConstants.STATUS_MOVEBUILDING);
             MapitActions.setMovingBuilding(movingBuilding.id);
+            currentActiveBuildingPrePos = getBuilding(movingBuilding.id).position;
+            currentActiveBuildingPrePos = {x:currentActiveBuildingPrePos.x,
+                                           y:currentActiveBuildingPrePos.y};
         }
+
+
+        currentActiveBuilding = movingBuilding.id;
 
         interaction.start({
             name: 'drag'
         }, event.interactable, movingBuilding);
-        currentActiveBuilding = movingBuilding.id;
     }
 }
 
@@ -267,8 +302,9 @@ function interactionDragMoveHandler(event) {
     event = event || window.event;
     pauseEvent(event);
 
-    if (MapitActions.getStatus()!=MapitConstants.STATUS_ADDBUILDING && MapitActions.getStatus()!=MapitConstants.STATUS_MOVEBUILDING) return;
-    MapitActions.moveBuilding(event.target.id, {x:event.dx, y:event.dy});
+    if (MapitActions.getStatus()==MapitConstants.STATUS_ADDBUILDING || 
+        MapitActions.getStatus()==MapitConstants.STATUS_MOVEBUILDING)
+        MapitActions.moveBuilding(event.target.id, {x:event.dx, y:event.dy});
 }
 
 window.PREVENT_STOP = false;
@@ -286,29 +322,34 @@ function interactionDragEndHandler(event) {
     if (event.target.id == 'temp')
         MapitActions.commitBuilding("temp", genKey());
     else
-        MapitActions.commitBuilding(event.target.id, event.target.id);
+        MapitActions.commitBuilding(event.target.id);
 
     MapitActions.setStatus(MapitConstants.STATUS_STANDBY);
     currentActiveBuilding = null;
 }
 
-function isValid(key) {
+function getBuilding(key) {
     var buildings = MapitStore.getAll();
-    var placeTaken = MapitStore.getPlace();
-    var building;
     for (var i = buildings.length-1; i>-1; i--)
         if (buildings[i].key == key) {
-            building = buildings[i];
-            break;
+            return(buildings[i]);
         }
+    return null;
+}
+
+function isValid(key, tryPos) {
+    var placeTaken = MapitStore.getPlace();
+    var building = getBuilding(key);
 
     assert(building);
+
+    var position = tryPos ? tryPos:building.position;
 
     var placement = getPlacement(building.props.footprint.x+"_"+building.props.footprint.y+"_"+(building.rotated?"v":"h"));
     for (var i = 0; i<placement.length; i++) {
         // console.log(building.position.x+placement[i][0]+", "+building.position.y+placement[i][1]);
-        if (placeTaken[building.position.x/13+placement[i][0]][building.position.y/13+placement[i][1]] &&
-            placeTaken[building.position.x/13+placement[i][0]][building.position.y/13+placement[i][1]] != building.buildingID) {
+        if (placeTaken[position.x/13+placement[i][0]][position.y/13+placement[i][1]] &&
+            placeTaken[position.x/13+placement[i][0]][position.y/13+placement[i][1]] != building.buildingID) {
             return false;
         }
     }
@@ -316,14 +357,8 @@ function isValid(key) {
 }
 
 function isRotationValid(key) {
-    var buildings = MapitStore.getAll();
-    var placeTaken = jQuery.extend(true, [], MapitStore.getPlace());
-    var building;
-    for (var i = buildings.length-1; i>-1; i--)
-        if (buildings[i].key == key) {
-            building = buildings[i];
-            break;
-        }
+    var placeTaken = MapitStore.getPlace();
+    var building = getBuilding(key);
 
     assert(building);
 
@@ -369,7 +404,7 @@ function tryAddRoad(x, y) {
     if (!MapitStore.getPlace()[x/13][y/13]) {
         var key = genKey();
         MapitActions.addBuilding(key, "road", {x: x, y:y}, getInfo("road"));
-        MapitActions.commitBuilding(key, key);
+        MapitActions.commitBuilding(key);
     }
 }
 

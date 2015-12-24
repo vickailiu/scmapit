@@ -61,12 +61,12 @@ var Type = React.createClass({
       models.push(
         model.thumb?
         (
-          <div  className="thumb js-drag" id={model.name} key={model.name}>
+          <div className="thumb js-drag" title={model.name} id={model.name} key={model.name}>
             <img src={"/mapit/public/asset/" + model.thumb} />
           </div>
         ):
         (
-          <div className="thumb js-drag buildinglabel" id={model.name} key={model.name}
+          <div className="thumb js-drag buildinglabel" title={model.name} id={model.name} key={model.name}
                style={{width:size_mapping(footprint[0])+"px", height:size_mapping(footprint[1])+"px", backgroundColor:this.props.data.color}} >
             <span>{model.label}</span>
           </div>
