@@ -161,6 +161,14 @@ var Menu = React.createClass({
 									<li><p>Modify building: Right click on the building, choose to rotate/delete on the toolbar</p></li>\
 									<li><p>View coverage: Click on the toggle on the list</p></li>\
 									<li>\
+										<p>Statistics:</p>\
+										<ul>\
+											<li>First line - Total population, resident buildings, need and utility capacity</li>\
+											<li>Second and third line - Coverage and total boosts for each specializations</li>\
+											<li>Forth line - Population, boosts and boosts breakdowns for individual resident</li>\
+										</ul>\
+									</li>\
+									<li>\
 										<p>Menu:</p>\
 										<ul>\
 											<li>Draw road - Click on the road toggle, then draw road just like MSPaint, press \'shift\' key and draw a straight one</li>\
