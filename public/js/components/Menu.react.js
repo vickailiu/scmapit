@@ -177,6 +177,23 @@ var Menu = React.createClass({
 						            $('#dialog').show();
 			    		}
 			    	}/>
+			    	<RippleButton name="misc." clickCallback={
+			    		function(){
+			    			$('#dialog .dialogContentTitle').html('');
+			                $('#dialog .dialogContentBody').html(
+								'<h4>The Project:</h4>\
+								<p>I\'m building this tool as a hobby and a way to explore new things related to web application. The project is still in development, bare with the bugs. The project is maintained on <a href="https://github.com/vickailiu/scmapit" target="_blank">Github</a>.</p>\
+								<h4>Credit:</h4>\
+								<p>Flask framework: <a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>, Reactjs: <a href="https://facebook.github.io/react/">https://facebook.github.io/react/</a></p>\
+								<p>Interact.js: <a href="http://interactjs.io/">http://interactjs.io/</a> where I see the possibility of creating this tool</p>\
+								<p>Other resources: <a href="http://www.getmdl.io/">http://www.getmdl.io/</a>, <a href="http://fezvrasta.github.io/bootstrap-material-design/">http://fezvrasta.github.io/bootstrap-material-design/</a>, <a href="https://zenorocha.github.io/clipboard.js/">https://zenorocha.github.io/clipboard.js/</a>, bwilsonvi\'s <a href="http://codepen.io/bwilsonvi/pen/VYygGz">http://codepen.io/bwilsonvi/pen/VYygGz</a></p>\
+								<h4>Disclaimer:</h4>\
+								<p>All trademarks and images are property of Electronic Arts Inc.</p>'
+			                );
+			                $("#dialog .dialogContainer").css("width", "720px");
+						            $('#dialog').show();
+			    		}
+			    	}/>
 			      </ul>
 			    </div>
 			</div>
