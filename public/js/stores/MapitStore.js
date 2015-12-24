@@ -117,15 +117,21 @@ function updateStat() {
 function updatePlacement(building, place) {
 	var placement = getPlacement(building.props.footprint.x+"_"+building.props.footprint.y+"_"+(building.rotated?"v":"h"));
 	for (var i = 0; i<placement.length; i++) {
-		// console.log(building.position.x+placement[i][0]+", "+building.position.y+placement[i][1]);
 		_placesTaken[building.position.x/13+placement[i][0]][building.position.y/13+placement[i][1]] = place;
 	}
 }
 
 function loadMap(buildings) {
 	_buildings = buildings;
+	for (var i = 1; i<=62; i++) {
+		_placesTaken[i] = [];
+		for (var j = 1; j<=63; j++) {
+			_placesTaken[i][j] = undefined;
+		}
+	}
+
 	for (var i = 0; i<_buildings.length; i++) {
-		updatePlacement(_buildings[i], _buildings[i].buildingID);
+		updatePlacement(_buildings[i], _buildings[i].key);
 	}
 	updateStat();
 }

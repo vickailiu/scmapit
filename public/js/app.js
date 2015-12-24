@@ -349,7 +349,7 @@ function isValid(key, tryPos) {
     for (var i = 0; i<placement.length; i++) {
         // console.log(building.position.x+placement[i][0]+", "+building.position.y+placement[i][1]);
         if (placeTaken[position.x/13+placement[i][0]][position.y/13+placement[i][1]] &&
-            placeTaken[position.x/13+placement[i][0]][position.y/13+placement[i][1]] != building.buildingID) {
+            placeTaken[position.x/13+placement[i][0]][position.y/13+placement[i][1]] != building.key) {
             return false;
         }
     }
@@ -367,7 +367,7 @@ function isRotationValid(key) {
     for (var i = 0; i<placement.length; i++) {
         // console.log(building.position.x+placement[i][0]+", "+building.position.y+placement[i][1]);
         if (placeTaken[building.position.x/13+placement[i][0]][building.position.y/13+placement[i][1]] &&
-            placeTaken[building.position.x/13+placement[i][0]][building.position.y/13+placement[i][1]] != building.buildingID) {
+            placeTaken[building.position.x/13+placement[i][0]][building.position.y/13+placement[i][1]] != building.key) {
             return false;
         }
     }
