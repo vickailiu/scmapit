@@ -60,7 +60,17 @@ var onmessage = function(e) {
 			}
 		}
 
-		buildingPop.population = Math.round( (rs[i].buildingID == 'residential zone'?1836:2206) * (1+buildingPop.totalBoost) );
+		if (rs[i].buildingID == 'residential zone') {
+			buildingPop.population = 1836;
+		} else if (rs[i].buildingID == 'paris town zone') {
+			buildingPop.population = 2019;
+		} else if (rs[i].buildingID == 'tokyo town zone') {
+			buildingPop.population = 2204;
+		} else if (rs[i].buildingID == 'london town zone') {
+			buildingPop.population = 2111;
+		}
+		
+		buildingPop.population = Math.round( buildingPop.population * (1.0+buildingPop.totalBoost) );
 		population.buildings[rs[i].key] = buildingPop;
 		population.total += buildingPop.population;
 	}

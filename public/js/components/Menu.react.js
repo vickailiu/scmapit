@@ -155,6 +155,7 @@ var Menu = React.createClass({
 											<li>General - Drag &amp; Drop</li>\
 											<li>Quick place same building - Upon dragging to the desired position, press \'space\' key</li>\
 											<li>Rotation - Press \'shift\' key to toggle</li>\
+											<li>Cancel - Press \'esc\' key</li>\
 										</ul>\
 									</li>\
 									<li><p>Modify building: Right click on the building, choose to rotate/delete on the toolbar</p></li>\
