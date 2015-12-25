@@ -91,7 +91,7 @@ json = {
 				{
 					'name': 'City Storage',
 					'label': 'Strg',
-					'footprint': '2*3'
+					'footprint': '3*2'
 				},
 				{
 					'name': 'City Hall',
@@ -381,6 +381,48 @@ json = {
 					'boost': 0.2
 				},
 				{
+					'name': 'Holiday Gift Market',
+					'label': 'GM',
+					'footprint': '1*2',
+					'radius': '4*10',
+					'boost': 0.2
+				},
+				{
+					'name': 'Delicacy Market',
+					'label': 'DM',
+					'footprint': '1*2',
+					'radius': '8*10',
+					'boost': 0.25
+				},
+				{
+					'name': 'Ice Skating Rink',
+					'label': 'Rink',
+					'footprint': '3*2',
+					'radius': '11*10',
+					'boost': 0.25
+				},
+				{
+					'name': 'Holiday Tree',
+					'label': 'HTree',
+					'footprint': '2*2',
+					'radius': '9*10',
+					'boost': 0.3
+				},
+				{
+					'name': 'New Year Tower',
+					'label': 'NYT',
+					'footprint': '2*2',
+					'radius': '9*9',
+					'boost': 0.4
+				},
+				{
+					'name': 'Holiday Fountain Park',
+					'label': 'HFP',
+					'footprint': '2*2',
+					'radius': '10*10',
+					'boost': 0.5
+				},
+				{
 					'name': 'Reflecting Pool Park',
 					'label': 'RP',
 					'thumb': 'pool.png',
@@ -437,6 +479,14 @@ json = {
 					'boost': 0.3
 				},
 				{
+					'name': 'Anchor Park',
+					'label': 'AP',
+					'thumb': 'anchor.png',
+					'footprint': '2*2',
+					'radius': '8*8',
+					'boost': 0.3
+				},
+				{
 					'name': 'Soccer Field',
 					'label': 'SF',
 					'thumb': 'soccor.png',
@@ -485,30 +535,6 @@ json = {
 					'boost': 0.4
 				},
 				{
-					'name': 'Skate Park',
-					'label': 'SP',
-					'thumb': 'skate.png',
-					'footprint': '1*2',
-					'radius': '6*12',
-					'boost': 0.4
-				},
-				{
-					'name': 'Anchor Park',
-					'label': 'AP',
-					'thumb': 'anchor.png',
-					'footprint': '2*2',
-					'radius': '8*8',
-					'boost': 0.3
-				},
-				{
-					'name': 'Sakura Park',
-					'label': 'SP',
-					'thumb': 'sakura.png',
-					'footprint': '1*1',
-					'radius': '8*8',
-					'boost': 0.25
-				},
-				{
 					'name': 'Tokyo Town Gate',
 					'label': 'TG',
 					'thumb': 'tokyogate.png',
@@ -517,46 +543,20 @@ json = {
 					'boost': 0.25
 				},
 				{
-					'name': 'Holiday Gift Market',
-					'label': 'GM',
+					'name': 'Skate Park',
+					'label': 'SP',
+					'thumb': 'skate.png',
 					'footprint': '1*2',
-					'radius': '4*10',
-					'boost': 0.2
-				},
-				{
-					'name': 'Delicacy Market',
-					'label': 'DM',
-					'footprint': '1*2',
-					'radius': '8*10',
-					'boost': 0.25
-				},
-				{
-					'name': 'Ice Skating Rink',
-					'label': 'Rink',
-					'footprint': '3*2',
-					'radius': '11*10',
-					'boost': 0.25
-				},
-				{
-					'name': 'Holiday Tree',
-					'label': 'HTree',
-					'footprint': '2*2',
-					'radius': '9*10',
-					'boost': 0.3
-				},
-				{
-					'name': 'New Year Tower',
-					'label': 'NYT',
-					'footprint': '2*2',
-					'radius': '9*9',
+					'radius': '6*12',
 					'boost': 0.4
 				},
 				{
-					'name': 'Holiday Fountain Park',
-					'label': 'HFP',
-					'footprint': '2*2',
-					'radius': '10*10',
-					'boost': 0.5
+					'name': 'Sakura Park',
+					'label': 'SP',
+					'thumb': 'sakura.png',
+					'footprint': '1*1',
+					'radius': '8*8',
+					'boost': 0.25
 				}
 			],
 			'color': 'green',
@@ -567,6 +567,7 @@ json = {
 				{
 					'name': 'Department of Education',
 					'label': 'DOE',
+					'thumb': 'department_of_education.png',
 					'footprint': '2*3',
 					'radius': '8*8',
 					'boost': 0.25
@@ -574,6 +575,7 @@ json = {
 				{
 					'name': 'Grade School',
 					'label': 'Grade',
+					'thumb': 'grade_school.png',
 					'footprint': '2*3',
 					'radius': '8*10',
 					'boost': 0.25
@@ -581,6 +583,7 @@ json = {
 				{
 					'name': 'Public Library',
 					'label': 'Lib',
+					'thumb': 'public_library.png',
 					'footprint': '2*2',
 					'radius': '12*8',
 					'boost': 0.25
@@ -588,6 +591,7 @@ json = {
 				{
 					'name': 'High School',
 					'label': 'HiSch',
+					'thumb': 'high_school.png',
 					'footprint': '4*2',
 					'radius': '14*12',
 					'boost': 0.3
@@ -595,6 +599,7 @@ json = {
 				{
 					'name': 'Community College',
 					'label': 'Colg',
+					'thumb': 'community_college.png',
 					'footprint': '4*2',
 					'radius': '16*16',
 					'boost': 0.4
@@ -602,6 +607,7 @@ json = {
 				{
 					'name': 'University',
 					'label': 'University',
+					'thumb': 'university.png',
 					'footprint': '4*4',
 					'radius': '22*22',
 					'boost': 0.5
@@ -615,6 +621,7 @@ json = {
 				{
 					'name': 'Department of Transportation',
 					'label': 'DOT',
+					'thumb': 'department_of_transportation.png',
 					'footprint': '2*3',
 					'radius': '8*8',
 					'boost': 0.3
@@ -622,13 +629,23 @@ json = {
 				{
 					'name': 'Bus Terminal',
 					'label': 'Bus',
+					'thumb': 'bus_terminal.png',
 					'footprint': '2*2',
 					'radius': '16*12',
 					'boost': 0.2
 				},
 				{
+					'name': 'London Bus Terminal',
+					'label': 'LBs',
+					'thumb': 'london_bus_terminal.png',
+					'footprint': '2*2',
+					'radius': '16*14',
+					'boost': 0.2
+				},
+				{
 					'name': 'Airship Hangar',
 					'label': 'Air',
+					'thumb': 'airship_hangar.png',
 					'footprint': '3*2',
 					'radius': '16*16',
 					'boost': 0.3
@@ -636,6 +653,7 @@ json = {
 				{
 					'name': 'Balloon Park',
 					'label': 'Blln',
+					'thumb': 'balloon_park.png',
 					'footprint': '2*2',
 					'radius': '16*16',
 					'boost': 0.4
@@ -643,6 +661,7 @@ json = {
 				{
 					'name': 'Heliport',
 					'label': 'Heli',
+					'thumb': 'heliport.png',
 					'footprint': '2*2',
 					'radius': '18*18',
 					'boost': 0.5
@@ -656,13 +675,15 @@ json = {
 				{
 					'name': 'Surfer Beach',
 					'label': 'b',
+					'thumb': 'surfer_beach.png',
 					'footprint': '1*3',
 					'radius': '3*12',
 					'boost': 0.1
 				},
 				{
-					'name': 'Volleybal Court',
+					'name': 'Volleyball Court',
 					'label': 'volly',
+					'thumb': 'volleyball_court.png',
 					'footprint': '2*2',
 					'radius': '4*12',
 					'boost': 0.1
@@ -670,6 +691,7 @@ json = {
 				{
 					'name': 'Lifeguard Tower',
 					'label': 'g',
+					'thumb': 'lifeguard_tower.png',
 					'footprint': '1*3',
 					'radius': '4*12',
 					'boost': 0.2
@@ -677,6 +699,7 @@ json = {
 				{
 					'name': 'Beachfront Shopping Mall',
 					'label': 'mall',
+					'thumb': 'beachfront_shopping_mall.png',
 					'footprint': '2*4',
 					'radius': '7*12',
 					'boost': 0.2
@@ -684,6 +707,7 @@ json = {
 				{
 					'name': 'Relaxing Beach',
 					'label': 'rb',
+					'thumb': 'relaxing_beach.png',
 					'footprint': '1*3',
 					'radius': '3*20',
 					'boost': 0.2
@@ -691,6 +715,7 @@ json = {
 				{
 					'name': 'Merman Statue',
 					'label': 'merman',
+					'thumb': 'merman_statue.png',
 					'footprint': '4*5',
 					'radius': '6*20',
 					'boost': 0.2
@@ -698,13 +723,15 @@ json = {
 				{
 					'name': 'Carousel',
 					'label': 'crsel',
+					'thumb': 'carousel.png',
 					'footprint': '2*2',
 					'radius': '4*20',
 					'boost': 0.1
 				},
 				{
-					'name': 'Bluebeard\'s Pirate',
+					'name': 'Bluebeard\'s Pirate Ship',
 					'label': 'prt',
+					'thumb': 'bluebeards_pirate_ship.png',
 					'footprint': '2*2',
 					'radius': '5*12',
 					'boost': 0.2
@@ -712,6 +739,7 @@ json = {
 				{
 					'name': 'Water Park',
 					'label': 'waterpark',
+					'thumb': 'water_park.png',
 					'footprint': '4*3',
 					'radius': '7*30',
 					'boost': 0.1
@@ -719,6 +747,7 @@ json = {
 				{
 					'name': 'Aquarium',
 					'label': 'aqrm',
+					'thumb': 'aquarium.png',
 					'footprint': '4*4',
 					'radius': '7*20',
 					'boost': 0.2
@@ -726,6 +755,7 @@ json = {
 				{
 					'name': 'Astro-Twirl Rocket Ride',
 					'label': 'ride',
+					'thumb': 'astro-twirl_rocket_ride.png',
 					'footprint': '6*4',
 					'radius': '9*20',
 					'boost': 0.3
@@ -733,6 +763,7 @@ json = {
 				{
 					'name': 'Lighthouse',
 					'label': 'light',
+					'thumb': 'lighthouse.png',
 					'footprint': '2*5',
 					'radius': '4*20',
 					'boost': 0.2
@@ -740,6 +771,7 @@ json = {
 				{
 					'name': 'Sailorman\'s Pier',
 					'label': 'pier',
+					'thumb': 'sailormans_pier.png',
 					'footprint': '2*5',
 					'radius': '6*20',
 					'boost': 0.3
@@ -747,6 +779,7 @@ json = {
 				{
 					'name': 'Luxury Boat Marina',
 					'label': 'Luxury Marina',
+					'thumb': 'luxury_boat_marina.png',
 					'footprint': '6*5',
 					'radius': '9*30',
 					'boost': 0.3
@@ -760,6 +793,7 @@ json = {
 				{
 					'name': 'Entertainment HQ',
 					'label': 'Enmt',
+					'thumb': 'entertainment_hq.png',
 					'footprint': '2*2',
 					'radius': '8*8',
 					'boost': 0.2
@@ -767,6 +801,7 @@ json = {
 				{
 					'name': 'Hotel',
 					'label': 'Hotel',
+					'thumb': 'hotel.png',
 					'footprint': '2*2',
 					'radius': '10*10',
 					'boost': 0.25
@@ -774,6 +809,7 @@ json = {
 				{
 					'name': 'Amphitheater',
 					'label': 'Thtr',
+					'thumb': 'amphitheater.png',
 					'footprint': '2*2',
 					'radius': '10*10',
 					'boost': 0.25
@@ -781,6 +817,7 @@ json = {
 				{
 					'name': 'Expo Center',
 					'label': 'Expo',
+					'thumb': 'expo_center.png',
 					'footprint': '6*4',
 					'radius': '18*16',
 					'boost': 0.4
@@ -788,6 +825,7 @@ json = {
 				{
 					'name': 'Stadium',
 					'label': 'Stadm',
+					'thumb': 'stadium.png',
 					'footprint': '6*4',
 					'radius': '20*20',
 					'boost': 0.5
@@ -795,6 +833,7 @@ json = {
 				{
 					'name': 'Sydney Opera House',
 					'label': 'Opera',
+					'thumb': 'sydney_opera_house.png',
 					'footprint': '6*4',
 					'radius': '20*20',
 					'boost': 0.6
@@ -802,9 +841,18 @@ json = {
 				{
 					'name': 'Ferris Wheel',
 					'label': 'Wheel',
+					'thumb': 'ferris_wheel.png',
 					'footprint': '3*3',
 					'radius': '20*20',
 					'boost': 0.6
+				},
+				{
+					'name': 'Sumo Hall',
+					'label': 'smh',
+					'thumb': 'sumo_hall.png',
+					'footprint': '4*4',
+					'radius': '16*16',
+					'boost': 0.4
 				}
 			],
 			'color': 'LawnGreen',
@@ -815,6 +863,7 @@ json = {
 				{
 					'name': 'City Name Sign',
 					'label': 'City Name Sign',
+					'thumb': 'city_name_sign.png',
 					'footprint': '8*2',
 					'radius': '11*30',
 					'boost': 0.6
@@ -822,6 +871,7 @@ json = {
 				{
 					'name': 'Cozy Cottages',
 					'label': 'CC',
+					'thumb': 'cozy_cottages.png',
 					'footprint': '1*2',
 					'radius': '3*12',
 					'boost': 0.2
@@ -829,6 +879,7 @@ json = {
 				{
 					'name': 'Mountainside Cottages',
 					'label': 'MC',
+					'thumb': 'mountainside_cottages.png',
 					'footprint': '1*4',
 					'radius': '4*12',
 					'boost': 0.25
@@ -836,6 +887,7 @@ json = {
 				{
 					'name': 'Hiker\'s Cottages',
 					'label': 'HC',
+					'thumb': 'hiders_cottages.png',
 					'footprint': '1*4',
 					'radius': '5*20',
 					'boost': '0.3'
@@ -843,6 +895,7 @@ json = {
 				{
 					'name': 'Alpine Cafe',
 					'label': 'ACafe',
+					'thumb': 'alpine_cafe.png',
 					'footprint':'2*4',
 					'radius': '6*20',
 					'boost': 0.35
@@ -850,6 +903,7 @@ json = {
 				{
 					'name': 'Mountainside Train Station',
 					'label': 'Train Stn',
+					'thumb': 'mountainside_train_station.png',
 					'footprint': '4*2',
 					'radius': '6*20',
 					'boost': 0.4
@@ -857,6 +911,7 @@ json = {
 				{
 					'name': 'Alpine Vineyard',
 					'label': 'A.Vine',
+					'thumb': 'alpine_vineyard.png',
 					'footprint': '4*4',
 					'radius': '7*30',
 					'boost': 0.45
@@ -864,6 +919,7 @@ json = {
 				{
 					'name': 'Mountain Lift',
 					'label': 'lft',
+					'thumb': 'mountain_lift.png',
 					'footprint': '2*8',
 					'radius': '4*20',
 					'boost': 0.3
@@ -871,6 +927,7 @@ json = {
 				{
 					'name': 'Halfpipe',
 					'label': 'pipe',
+					'thumb': 'halfpipe.png',
 					'footprint': '2*6',
 					'radius': '5*20',
 					'boost': 0.35
@@ -878,6 +935,7 @@ json = {
 				{
 					'name': 'Ski Jumping Hill',
 					'label': 'sj',
+					'thumb': 'ski_jumping_hill.png',
 					'footprint': '2*8',
 					'radius': '6*20',
 					'boost': 0.4
@@ -885,6 +943,7 @@ json = {
 				{
 					'name': 'Ski Hotel',
 					'label': 'hotl',
+					'thumb': 'ski_hotel.png',
 					'footprint': '4*4',
 					'radius': '7*20',
 					'boost': 0.45
@@ -892,6 +951,7 @@ json = {
 				{
 					'name': 'Ski Resort',
 					'label': 'resort',
+					'thumb': 'ski_resort.png',
 					'footprint': '6*8',
 					'radius': '8*30',
 					'boost': 0.5
@@ -899,6 +959,7 @@ json = {
 				{
 					'name': 'Observatory',
 					'label': 'obsr',
+					'thumb': 'observatory.png',
 					'footprint': '4*6',
 					'radius': '5*20',
 					'boost': 0.4
@@ -906,6 +967,7 @@ json = {
 				{
 					'name': 'Mount SimCity',
 					'label': 'mtsc',
+					'thumb': 'mount_simcity.png',
 					'footprint': '4*6',
 					'radius': '7*20',
 					'boost': 0.45
@@ -913,6 +975,7 @@ json = {
 				{
 					'name': 'Mountain Palace',
 					'label': 'mtplc',
+					'thumb': 'mountain_palace.png',
 					'footprint': '6*4',
 					'radius': '8*30',
 					'boost': 0.45
@@ -920,6 +983,7 @@ json = {
 				{
 					'name': 'Castle',
 					'label': 'castle',
+					'thumb': 'castle.png',
 					'footprint': '6*4',
 					'radius': '8*30',
 					'boost': 0.5
@@ -933,6 +997,7 @@ json = {
 				{
 					'name': 'Gambling HQ',
 					'label': 'Gamb',
+					'thumb': 'gambling_hq.png',
 					'footprint': '2*2',
 					'radius': '8*8',
 					'boost': 0.2
@@ -940,6 +1005,7 @@ json = {
 				{
 					'name': 'Gambling House',
 					'label': 'GbHs',
+					'thumb': 'gambling_house.png',
 					'footprint': '2*2',
 					'radius': '8*10',
 					'boost': 0.2
@@ -947,6 +1013,7 @@ json = {
 				{
 					'name': 'Sleek Casino',
 					'label': 'SlCs',
+					'thumb': 'sleek_casino.png',
 					'footprint': '2*2',
 					'radius': '12*10',
 					'boost': 0.25
@@ -954,6 +1021,7 @@ json = {
 				{
 					'name': 'Sleek Casino Tower',
 					'label': 'SlCT',
+					'thumb': 'sleek_casino_tower.png',
 					'footprint': '2*2',
 					'radius': '12*10',
 					'boost': 0.25
@@ -961,6 +1029,7 @@ json = {
 				{
 					'name': 'Sci-fi Casino',
 					'label': 'ScCs',
+					'thumb': 'sci-fi_casino.png',
 					'footprint': '2*2',
 					'radius': '12*12',
 					'boost': 0.3
@@ -968,6 +1037,7 @@ json = {
 				{
 					'name': 'Sci-fi Casino Tower',
 					'label': 'ScCT',
+					'thumb': 'sci-fi_casino_tower.png',
 					'footprint': '2*2',
 					'radius': '16*12',
 					'boost': 0.3
@@ -975,6 +1045,7 @@ json = {
 				{
 					'name': 'Luxurious Casino',
 					'label': 'LxCs',
+					'thumb': 'luxurious_casino.png',
 					'footprint': '2*2',
 					'radius': '16*16',
 					'boost': 0.5
@@ -982,6 +1053,7 @@ json = {
 				{
 					'name': 'Luxurious Casino Tower',
 					'label': 'LxCT',
+					'thumb': 'luxurious_casino_tower.png',
 					'footprint': '2*2',
 					'radius': '16*16',
 					'boost': 0.6
@@ -995,6 +1067,7 @@ json = {
 				{
 					'name': 'Department of Culture',
 					'label': 'DOC',
+					'thumb': 'department_of_culture.png',
 					'footprint': '3*2',
 					'radius': '8*8',
 					'boost': 0.2
@@ -1002,6 +1075,7 @@ json = {
 				{
 					'name': 'Tower of Pisa',
 					'label': 'Pisa',
+					'thumb': 'tower_of_pisa.png',
 					'footprint': '2*2',
 					'radius': '14*16',
 					'boost': 0.2
@@ -1009,6 +1083,7 @@ json = {
 				{
 					'name': 'Big Ben',
 					'label': 'BBen',
+					'thumb': 'big_ben.png',
 					'footprint': '3*2',
 					'radius': '16*14',
 					'boost': 0.3
@@ -1016,6 +1091,7 @@ json = {
 				{
 					'name': 'Arc de Triomphe',
 					'label': 'Arc',
+					'thumb': 'arc_de_triomphe.png',
 					'footprint': '2*3',
 					'radius': '14*16',
 					'boost': 0.4
@@ -1023,6 +1099,7 @@ json = {
 				{
 					'name': 'Brandenburg Gate',
 					'label': 'BGate',
+					'thumb': 'brandenburg_gate.png',
 					'footprint': '2*4',
 					'radius': '16*14',
 					'boost': 0.4
@@ -1030,6 +1107,7 @@ json = {
 				{
 					'name': 'Empire State Building',
 					'label': 'Empire',
+					'thumb': 'empire_state_building.png',
 					'footprint': '2*4',
 					'radius': '16*16',
 					'boost': 0.4
@@ -1037,6 +1115,7 @@ json = {
 				{
 					'name': 'Statue of Liberty',
 					'label': 'S.Liberty',
+					'thumb': 'statue_of_liberty.png',
 					'footprint': '3*3',
 					'radius': '14*16',
 					'boost': 0.6
@@ -1044,9 +1123,26 @@ json = {
 				{
 					'name': 'Washington Monument',
 					'label': 'W.M.',
+					'thumb': 'washington_monument.png',
 					'footprint': '2*2',
 					'radius': '18*18',
 					'boost': 0.6
+				},
+				{
+					'name': 'Himeji Castle',
+					'label': 'cstl',
+					'thumb': 'himeji_castle.png',
+					'footprint': '4*4',
+					'radius': '16*18',
+					'boost': 0.6
+				},
+				{
+					'name': 'Eiffel Tower',
+					'label': 'Effl',
+					'thumb': 'eiffel_tower.png',
+					'footprint': '2*2',
+					'radius': '16*18',
+					'boost': 0.4
 				}
 			],
 			'color': 'SpringGreen',
@@ -1057,6 +1153,7 @@ json = {
 				{
 					'name': 'church',
 					'label': 'church',
+					'thumb': 'church.png',
 					'footprint': '6*4',
 					'radius': '12*12',
 					'boost': 0.2
@@ -1064,6 +1161,7 @@ json = {
 				{
 					'name': 'mosque',
 					'label': 'mosque',
+					'thumb': 'mosque.png',
 					'footprint': '6*4',
 					'radius': '12*12',
 					'boost': 0.2
@@ -1071,6 +1169,7 @@ json = {
 				{
 					'name': 'temple',
 					'label': 'temple',
+					'thumb': 'temple.png',
 					'footprint': '6*4',
 					'radius': '12*12',
 					'boost': 0.2
@@ -1078,6 +1177,7 @@ json = {
 				{
 					'name': 'modern temple',
 					'label': 'mtemple',
+					'thumb': 'modern_temple.png',
 					'footprint': '6*4',
 					'radius': '12*12',
 					'boost': 0.2
