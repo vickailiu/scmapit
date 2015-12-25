@@ -88,7 +88,7 @@
               <!-- Dialog -->
               <div class="dialogContainer" style="width: 450px">
                   <script type="text/javascript">var submitted=false;</script>
-                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){$('#feedback').hide();}"></iframe>
+                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){$('#feedback').hide();showSent();}"></iframe>
                   <form action="https://docs.google.com/forms/d/1FCRDJl8ssu_P8INJ1N4ewLtw406yqBpTrHnk3IKv8F0/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
                       <ol role="list" class="ss-question-list" style="padding-left: 0">
                           <!-- Dialog title and body -->
@@ -180,6 +180,13 @@
     var map_data = {{data | tojson}};
     if (map_data && map_data.length > 0)
         deserialize(map_data);
+
+    function showSent() {
+      $('#dialog .dialogContentTitle').html('Sent!');
+      $('#dialog .dialogContentBody').html('<p>Your can check <a href="http://flask.pocoo.org/">here</a> for my response later on.</p>');
+      $("#dialog .dialogContainer").css("width", "320px");
+      $('#dialog').show();
+    }
   </script>
 
   <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->

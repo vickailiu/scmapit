@@ -515,6 +515,48 @@ json = {
 					'footprint': '2*2',
 					'radius': '10*10',
 					'boost': 0.25
+				},
+				{
+					'name': 'Holiday Gift Market',
+					'label': 'GM',
+					'footprint': '1*2',
+					'radius': '4*10',
+					'boost': 0.2
+				},
+				{
+					'name': 'Delicacy Market',
+					'label': 'DM',
+					'footprint': '1*2',
+					'radius': '8*10',
+					'boost': 0.25
+				},
+				{
+					'name': 'Ice Skating Rink',
+					'label': 'Rink',
+					'footprint': '3*2',
+					'radius': '11*10',
+					'boost': 0.25
+				},
+				{
+					'name': 'Holiday Tree',
+					'label': 'HTree',
+					'footprint': '2*2',
+					'radius': '9*10',
+					'boost': 0.3
+				},
+				{
+					'name': 'New Year Tower',
+					'label': 'NYT',
+					'footprint': '2*2',
+					'radius': '9*9',
+					'boost': 0.4
+				},
+				{
+					'name': 'Holiday Fountain Park',
+					'label': 'HFP',
+					'footprint': '2*2',
+					'radius': '10*10',
+					'boost': 0.5
 				}
 			],
 			'color': 'green',
