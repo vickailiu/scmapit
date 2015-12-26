@@ -143,43 +143,47 @@ var Menu = React.createClass({
 			    		function(){
 			    			$('#dialog .dialogContentTitle').html('Instructions:');
 			                $('#dialog .dialogContentBody').html(
-			                    '<ul>\
-									<style type="text/css">\
-									p {\
-										margin-bottom:3px;\
-									}\
-									</style>\
-									<li>\
-										<p>Add building:</p>\
-										<ul>\
-											<li>General - Drag &amp; Drop</li>\
-											<li>Quick place same building - Upon dragging to the desired position, press \'space\' key</li>\
-											<li>Rotation - Press \'shift\' key to toggle</li>\
-											<li>Cancel - Press \'esc\' key</li>\
-										</ul>\
-									</li>\
-									<li><p>Modify building: Right click on the building, choose to rotate/delete on the toolbar</p></li>\
-									<li><p>View coverage: Click on the toggle on the list</p></li>\
-									<li>\
-										<p>Statistics:</p>\
-										<ul>\
-											<li>First line - Total population, resident buildings, need and utility capacity</li>\
-											<li>Second and third line - Coverage and total boosts for each specializations</li>\
-											<li>Forth line - Population, boosts and boosts breakdowns for individual resident</li>\
-										</ul>\
-									</li>\
-									<li>\
-										<p>Menu:</p>\
-										<ul>\
-											<li>Draw road - Click on the road toggle, then draw road just like MSPaint, press \'shift\' key and draw a straight one</li>\
-											<li>Erase - Click on the eraser toggle, then erase buildings just like MSPaint</li>\
-											<li>New - Use with caution! will remove all the buildings on the canvas</li>\
-											<li>Recover - If you accidentally refresh the page or your computer shuts down, there are possibilities that you don\'t need to redo everything</li>\
-											<li>Share - Share your layout to your friends! And is it a safer way to save your layout. Keep the URL!</li>\
-											<li>Feedback - Do let me know if there is anything wrong/suggestions</li>\
-											<li>Help - is me...</li>\
-										</ul>\
-									</li>\
+			                    '<style>\
+								p,ul { margin: 0;}\
+								</style>\
+			                    <b>Basics</b>\
+								<hr style="margin: 3px 0;">\
+								<p>Add buildings:</p>\
+								<ul> <li>Basics - drag &amp; drop</li>\
+								<li>Quick place same building - upon dragging to the desired position, press \'space\' key</li>\
+								<li>Rotation - press \'shift\' key to toggle rotation</li>\
+								<li>Cancel - press \'esc\' key</li>\
+								</ul>\
+								<p>Modify buildings:</p>\
+								<ul> <li style="list-style-type:none">Right click on the building, choose to rotate/delete on the toolbar</li>\
+								</ul>\
+								<p>Draw road:</p>\
+								<ul> <li style="list-style-type:none">Click on the road button on menu, then draw road just like MSPaint, press \'shift\' key and draw a straight one</li>\
+								</ul>\
+								<p>Erase buildings:</p>\
+								<ul> <li style="list-style-type:none">Click on the bulldozer button on menu, then erase buildings just like MSPaint</li>\
+								</ul>\
+								<br><b>Coverage &amp; Boost</b>\
+								<hr style="margin: 3px 0;">\
+								<p>Coverage toggle</p>\
+								<ul> <li>Click on the toggle for each types of utilities, coverages or specializations to see the overage of that type</li>\
+								</ul>\
+								<p>Statistics panel</p>\
+								<ul> <li>Line 1 - total population*, resident buildings, resource demand and utility capacity</li>\
+								<li>Line 2&amp;3 - residence coverages and total boosts for each type of specializations</li>\
+								<li>Line 4 - population*, boosts and boosts breakdowns for individual selected resident building</li>\
+								<li style="list-style-type:none"><i style="width: initial;height: initial;">*the population is estimated with the assumption that you\'ve upgraded the building to the highest level</i></li>\
+								</ul>\
+								<br><b>Save &amp; Share (on top menu)</b>\
+								<hr style="margin: 3px 0;">\
+								<p>New</p>\
+								<ul> <li style="list-style-type:none">Use with caution! will remove all the buildings on the canvas</li>\
+								</ul>\
+								<p>Recover</p>\
+								<ul> <li style="list-style-type:none">The map will be saved to your computer whenever you make a change on the map. If you accidentally refresh the page or your computer shuts down, there are possibilities that you don\'t need to redo everything</li>\
+								</ul>\
+								<p>Share</p>\
+								<ul> <li style="list-style-type:none">Share your layout to your friends! And is it a safer way to save your layout. Keep the URL!</li>\
 								</ul>'
 			                );
 			                $("#dialog .dialogContainer").css("width", "720px");
