@@ -134,11 +134,6 @@ var Menu = React.createClass({
 						    });
 				        }
 			    	} />
-			    	<RippleButton name="feedback" clickCallback={
-			    		function(){
-			    			$('#feedback').show();
-			    		}
-			    	}/>
 			    	<RippleButton name="help" clickCallback={
 			    		function(){
 			    			$('#dialog .dialogContentTitle').html('Instructions:');
