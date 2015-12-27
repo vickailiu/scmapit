@@ -86,26 +86,31 @@ json = {
 				{
 					'name': 'Town Hall',
 					'label': 'TH',
+					'thumb': 'town_hall.png',
 					'footprint': '2*3'
 				},
 				{
 					'name': 'City Storage',
 					'label': 'Strg',
+					'thumb': 'city_storage.png',
 					'footprint': '3*2'
 				},
 				{
 					'name': 'City Hall',
 					'label': 'CH',
+					'thumb': 'city_hall.png',
 					'footprint': '2*3'
 				},
 				{
 					'name': 'Mayor\'s Mansion',
 					'label': 'Masion',
+					'thumb': 'mayors_mansion.png',
 					'footprint': '3*3'
 				},
 				{
 					'name': 'Department of Epic Projects',
 					'label': 'DoEP',
+					'thumb': 'department_of_epic_projects.png',
 					'footprint': '2*2'
 				}
 			],
@@ -383,6 +388,7 @@ json = {
 				{
 					'name': 'Holiday Gift Market',
 					'label': 'GM',
+					'thumb': 'holiday_gift_market.png',
 					'footprint': '1*2',
 					'radius': '4*10',
 					'boost': 0.2
@@ -390,6 +396,7 @@ json = {
 				{
 					'name': 'Delicacy Market',
 					'label': 'DM',
+					'thumb': 'delicacy_market.png',
 					'footprint': '1*2',
 					'radius': '8*10',
 					'boost': 0.25
@@ -397,6 +404,7 @@ json = {
 				{
 					'name': 'Ice Skating Rink',
 					'label': 'Rink',
+					'thumb': 'ice_skating_rink.png',
 					'footprint': '3*2',
 					'radius': '11*10',
 					'boost': 0.25
@@ -404,13 +412,15 @@ json = {
 				{
 					'name': 'Holiday Tree',
 					'label': 'HTree',
+					'thumb': 'holiday_tree.png',
 					'footprint': '2*2',
 					'radius': '9*10',
 					'boost': 0.3
 				},
 				{
-					'name': 'New Year Tower',
+					'name': 'New Years Tower',
 					'label': 'NYT',
+					'thumb': 'new_years_tower.png',
 					'footprint': '2*2',
 					'radius': '9*9',
 					'boost': 0.4
@@ -418,6 +428,7 @@ json = {
 				{
 					'name': 'Holiday Fountain Park',
 					'label': 'HFP',
+					'thumb': 'holiday_fountain_park.png',
 					'footprint': '2*2',
 					'radius': '10*10',
 					'boost': 0.5
