@@ -25,6 +25,21 @@ function getRotationTransform(rotated, info) {
   return transform;
 }
 
+function getLabelTransform(rotated, info) {
+  var transform;
+  if (rotated) {
+    var diff = info.footprint.x-info.footprint.y;
+    if (Math.abs(diff) % 2 != 0) {
+      if (diff < 0) {
+        transform = 'translate(6.5px, -6.5px)';
+      } else {
+        transform = 'translate(-6.5px, 6.5px)';
+      }
+    }
+  }
+  return transform;
+}
+
 function renderBuilding(building) {
   var info = getInfo(building.buildingID);
   var transform = 'translate(' + building.position.x + 'px, ' + building.position.y + 'px)';
@@ -53,10 +68,22 @@ function renderBuilding(building) {
               transform: rotTransform
             }
   }
+
+  var labelTransform = getLabelTransform(building.rotated, info);
+  var labelProps = {
+    className: "buildinglabel",
+    style: {
+              width:size_mapping(info.footprint.x), 
+              height:size_mapping(info.footprint.y), 
+              webkitTransform: labelTransform,
+              transform: labelTransform
+            }
+  }
+
   return (
     <div {...props_} key={building.key} >
       <div {...childProps}></div>
-      <div className="buildinglabel" style={{width:size_mapping(info.footprint.x), height:size_mapping(info.footprint.y)}}>
+      <div {...labelProps}>
         <span>{info.label}</span>
       </div>
     </div>
