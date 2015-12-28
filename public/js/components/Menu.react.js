@@ -77,7 +77,7 @@ var Menu = React.createClass({
 						                    '<button class="clip_btn" data-clipboard-target="#link">' +
 						                    'copy' +
 						                    '</button>'
-						                );
+						                ).css("overflow-y", "visible");
 						                var clipboard = new Clipboard('.clip_btn');
 						                var btns = document.querySelectorAll('.clip_btn');
 						                for (var i = 0; i < btns.length; i++) {
@@ -126,8 +126,18 @@ var Menu = React.createClass({
 						            } else {
 						                console.log(serialize());
 						                $('#dialog .dialogContentTitle').html('Ooops, there are something wrong');
-						                $('#dialog .dialogContentBody').html('But your work can be saved, right click on the page -> inspect element -> store the log text from the console to a text file. Let me know and I will help you from there.');
+						                $('#dialog .dialogContentBody').html('But your work can be saved, right click on the page -> inspect element -> store the log text from the console to a text file. Let me know and I will help you from there.')
+						                								.css("overflow-y", "visible");
 						            }
+						            $("#dialog .dialogContainer").css("width", "320px");
+						            $('#dialog').show();
+						        },
+						        error: function(data) {
+						        	console.log(data);
+						        	console.log(serialize());
+					                $('#dialog .dialogContentTitle').html('Ooops, there are something wrong');
+					                $('#dialog .dialogContentBody').html('But your work can be saved, right click on the page -> inspect element -> store the log text from the console to a text file. Let me know and I will help you from there.')
+					                								.css("overflow-y", "visible");
 						            $("#dialog .dialogContainer").css("width", "320px");
 						            $('#dialog').show();
 						        }
@@ -180,7 +190,7 @@ var Menu = React.createClass({
 								<p>Share</p>\
 								<ul> <li style="list-style-type:none">Share your layout to your friends! And is it a safer way to save your layout. Keep the URL!</li>\
 								</ul>'
-			                );
+			                ).css("overflow-y", "scroll");
 			                $("#dialog .dialogContainer").css("width", "720px");
 						            $('#dialog').show();
 			    		}
@@ -197,7 +207,7 @@ var Menu = React.createClass({
 								<p>Other resources: <a href="http://www.getmdl.io/" target="_blank">http://www.getmdl.io/</a>, <a href="http://fezvrasta.github.io/bootstrap-material-design/" target="_blank">http://fezvrasta.github.io/bootstrap-material-design/</a>, <a href="https://zenorocha.github.io/clipboard.js/" target="_blank">https://zenorocha.github.io/clipboard.js/</a>, bwilsonvi\'s <a href="http://codepen.io/bwilsonvi/pen/VYygGz" target="_blank">http://codepen.io/bwilsonvi/pen/VYygGz</a></p>\
 								<h4>Disclaimer:</h4>\
 								<p>All trademarks and images are property of Electronic Arts Inc.</p>'
-			                );
+			                ).css("overflow-y", "scroll");
 			                $("#dialog .dialogContainer").css("width", "720px");
 						            $('#dialog').show();
 			    		}

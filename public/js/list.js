@@ -39,7 +39,7 @@ json = {
 				}
 			],
 			'color': 'orange',
-			'placement': 'base'
+			'placement': 'addons'
 		},
 		'industrial': {
 			'model': [
@@ -115,7 +115,7 @@ json = {
 				}
 			],
 			'color': 'RoyalBlue',
-			'placement': 'base'
+			'placement': 'addons'
 		},
 		'road': {
 			'model': [
