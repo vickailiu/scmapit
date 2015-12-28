@@ -6,8 +6,8 @@ var MapitConstants = require('../constants/MapitConstants');
 var Menu = React.createClass({
   render: function() {
   	return (
-  		<div className="navbar navbar-inverse" style={{width: 1290}}>
-    		<div className="container-fluid">
+  		<div className="navbar navbar-inverse">
+    		<div className="container-fluid" style={{width: 1290, margin: "0 auto"}}>
 		  		<div className="navbar-header">
 		       	 <a className="navbar-brand" href="javascript:void(0)">Mapit<div className="ripple-container"></div></a>
 		      	</div>

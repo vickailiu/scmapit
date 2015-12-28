@@ -231,30 +231,44 @@ document.onkeyup = function(e) {
     return document.defaultAction;
 }
 
+$(window).resize(function () {
+    waitForFinalEvent(function(){
+      console.log('Resize...');
+      MAPOFFSET = $('#buildings').offset();
+      interact(".js-drag").unset();
+      registerInteractjs();
+      //...
+    }, 500, "resize_re-register");
+});
+
+registerInteractjs();
+
 // register interactjs events
-interact(".js-drag")
-    .draggable({
-        autoScroll: true,
-        manualStart: true,
-        snap: {
-            targets: [
-                interact.createSnapGrid({x: 13, y: 13, offset: { x: MAPOFFSET.left, y: MAPOFFSET.top}})
-                //interact.createSnapGrid({ x: 1, y: 1})
-            ],
-            range: Infinity,
-            relativePoints: [{
-                x: 0,
-                y: 0
-            }]
-        },
-        inertia: false,
-        restrict: {
-            endOnly: false
-        }
-    })
-    .on('move',     interactBuildingMoveHandler)
-    .on('dragmove', interactionDragMoveHandler )
-    .on('dragend',  interactionDragEndHandler  );
+function registerInteractjs() {
+    interact(".js-drag")
+        .draggable({
+            autoScroll: true,
+            manualStart: true,
+            snap: {
+                targets: [
+                    interact.createSnapGrid({x: 13, y: 13, offset: { x: MAPOFFSET.left, y: MAPOFFSET.top}})
+                    //interact.createSnapGrid({ x: 1, y: 1})
+                ],
+                range: Infinity,
+                relativePoints: [{
+                    x: 0,
+                    y: 0
+                }]
+            },
+            inertia: false,
+            restrict: {
+                endOnly: false
+            }
+        })
+        .on('move',     interactBuildingMoveHandler)
+        .on('dragmove', interactionDragMoveHandler )
+        .on('dragend',  interactionDragEndHandler  );   
+}
 
 function interactBuildingMoveHandler(event) {
     event = event || window.event;
@@ -288,7 +302,6 @@ function interactBuildingMoveHandler(event) {
             currentActiveBuildingPrePos = {x:currentActiveBuildingPrePos.x,
                                            y:currentActiveBuildingPrePos.y};
         }
-
 
         currentActiveBuilding = movingBuilding.id;
 

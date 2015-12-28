@@ -4,36 +4,33 @@ ins.adsbygoogle {
     top: 900px;
     left: 20px;
 }
-
 /*menu*/
+
 i {
     display: inline-block;
-    width:  24px;
+    width: 24px;
     height: 24px;
     background-color: white!important;
 }
-
 li.active i {
     background-color: greenyellow!important;
 }
-
 i.road {
-  -webkit-mask: url(../img/road.svg) no-repeat 100% 100%;
-  mask: url(../img/road.svg) no-repeat 100% 100%;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  background-color: black;
+    -webkit-mask: url(../img/road.svg) no-repeat 100% 100%;
+    mask: url(../img/road.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
 }
-
 i.erase {
-  -webkit-mask: url(../img/erase.svg) no-repeat 100% 100%;
-  mask: url(../img/erase.svg) no-repeat 100% 100%;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  background-color: black;
+    -webkit-mask: url(../img/erase.svg) no-repeat 100% 100%;
+    mask: url(../img/erase.svg) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: black;
 }
-
 /*canvas*/
+
 .non-selectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -42,148 +39,119 @@ i.erase {
     -ms-user-select: none;
     user-select: none;
 }
-
 #main {
-	display: inline-block;
     width: 820px;
-	margin: 0 20px;
-    position: absolute;
-    /* top: 20px; */
-    left: 0px;
+    margin: 0 20px;
 }
-
 #canvas {
-	/*margin-top: 10px;*/
-	position: relative;
+    /*margin-top: 10px;*/
+    
+    position: relative;
 }
-
 #map {
-	display: table
+    display: table
 }
-
 .row {
     display: table;
 }
-
 .row >div {
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
     border-width: 0 1px 1px 0;
     float: left;
-	font-size: 10px;
+    font-size: 10px;
     font-family: sans-serif;
     color: gray;
     overflow: hidden;
     line-height: 13px;
 }
-
 .border-bottom {
     border-bottom-color: black!important;
 }
-
 .border-right {
     border-right-color: black!important;
 }
-
 .map_cell {
-	width: 12px;
-	height: 12px;
+    width: 12px;
+    height: 12px;
 }
-
 .label {
-	width: 13px;
-	height: 13px;
+    width: 13px;
+    height: 13px;
 }
-
 .label.top {
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
     border-width: 0 0 1px 0;
 }
-
 .label.left {
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
     border-width: 0 1px 0 0;
 }
-
 .label.top.left {
-	width: 14px !important;
-	height: 14px !important;
-	border: 0 !important;
+    width: 14px !important;
+    height: 14px !important;
+    border: 0 !important;
 }
-
 .entry {
-	background: slategray !important;
-	color: white !important;
+    background: slategray !important;
+    color: white !important;
 }
-
 #buildings {
-	position: absolute;
-	top: 0;
-	left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-
 .manager > div {
-	position: absolute;
+    position: absolute;
 }
-
 /*building list*/
-#palette {
-	width: 420px;
-	position: absolute;
-	top: 60px; 
-    left: 860px;
-}
 
+#palette {
+    width: 420px;
+    float: right;
+}
 #palette .mdl-tabs__tab {
     font-size: 11px;
     padding: 0 5px;
 }
-
 #palette .mdl-tabs__panel {
     padding: 10px 20px;
     height: 800px;
     overflow-y: scroll;
 }
-
 .display_row {
     display: table;
 }
-
 .object_header span {
     line-height: 24px;
     display: table-cell;
 }
-
 .object_header label {
     margin-left: 10px;
 }
-
 .thumb {
     width: 64px;
     height: 64px;
     margin: 5px;
     float: left;
 }
-
 .buildinglabel {
     text-align: center;
     z-index: 20;
     display: table;
 }
-
 .thumb img {
     max-width: 100%;
     max-height: 100%;
     vertical-align: middle;
 }
-
 .buildinglabel span {
     display: table-cell;
     vertical-align: middle;
     line-height: normal;
     font-size: 10px;
 }
-
 /*buildings that on the canvas*/
+
 .model {
     border: 1px solid black;
     position: absolute;
@@ -191,28 +159,25 @@ i.erase {
     left: 0;
     z-index: 10;
 }
-
 .region {
     /*z-index: 5;*/
+    
     border-width: 0;
 }
-
 #canvas .buildinglabel {
     position: absolute;
 }
-
 #canvas .buildinglabel span {
     display: table-cell;
     vertical-align: middle;
     line-height: normal;
     font-size: 10px;
 }
-
 /*statistics*/
+
 .stat_row {
     display: table;
 }
-
 .stat_row div {
     float: left;
 }
