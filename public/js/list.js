@@ -611,7 +611,7 @@ json = {
 					'name': 'Community College',
 					'label': 'Colg',
 					'thumb': 'community_college.png',
-					'footprint': '4*2',
+					'footprint': '4*3',
 					'radius': '16*16',
 					'boost': 0.4
 				},
@@ -711,7 +711,7 @@ json = {
 					'name': 'Beachfront Shopping Mall',
 					'label': 'mall',
 					'thumb': 'beachfront_shopping_mall.png',
-					'footprint': '2*4',
+					'footprint': '4*2',
 					'radius': '7*12',
 					'boost': 0.2
 				},
