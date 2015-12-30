@@ -68,6 +68,8 @@ var onmessage = function(e) {
 			buildingPop.population = 2204;
 		} else if (rs[i].buildingID == 'london town zone') {
 			buildingPop.population = 2111;
+		} else if (rs[i].buildingID == 'epic building') {
+			buildingPop.population = 2411;
 		}
 		
 		buildingPop.population = Math.round( buildingPop.population * (1.0+buildingPop.totalBoost) );

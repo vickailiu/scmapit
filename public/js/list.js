@@ -9,6 +9,12 @@ json = {
 					'thumb':'RZ.png'
 				},
 				{
+					'name': 'epic building',
+					'label': 'EB',
+					'footprint': '2*2',
+					'thumb':'EB.png'
+				},
+				{
 					'name': 'paris town zone',
 					'label': 'PZ',
 					'footprint': '2*2',
