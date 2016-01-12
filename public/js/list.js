@@ -1157,7 +1157,7 @@ json = {
 					'name': 'Eiffel Tower',
 					'label': 'Effl',
 					'thumb': 'eiffel_tower.png',
-					'footprint': '2*2',
+					'footprint': '4*4',
 					'radius': '16*18',
 					'boost': 0.4
 				}
